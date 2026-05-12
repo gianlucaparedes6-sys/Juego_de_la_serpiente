@@ -6,12 +6,9 @@
     let serpienteX=0;
     let serpienteY=0;
     const serpiente=[];
-    serpiente.push({x: 125, y: 125});
-    serpiente.push({x: 250, y: 50});
-    serpiente.push({x: 200, y: 375});
-    serpiente.push({x: 375, y: 200});
-    serpiente.push({x: 0, y: 200});
-    serpiente.push({x: 375, y: 0});
+    serpiente.push({x: 200, y: 125});
+    serpiente.push({x: 200, y: 150});
+    serpiente.push({x: 175, y: 150});
     
 
     // Primera pintura del juego al cargar la página
@@ -45,13 +42,17 @@
 
   ctx.stroke();
 }
-function dibujarSerpiente(){
+function pintarSerpiente(){
 
-  ctx.fillStyle = "lime";
-
-  for(let i = 0; i < serpiente.length; i++){
+   for(let i = 0; i < serpiente.length; i++){
 
     let parte = serpiente[i];
+
+    if(i == 0){
+      ctx.fillStyle = "red";
+    }else{
+      ctx.fillStyle = "lime";
+    }
 
     ctx.fillRect(
       parte.x,
@@ -66,7 +67,7 @@ function dibujarSerpiente(){
     function dibujarTodo() {
       limpiarCanvas();
       dibujarTablero();
-      dibujarSerpiente();
+      pintarSerpiente();
     }
 function cambiarDireccion(direccion){
 
