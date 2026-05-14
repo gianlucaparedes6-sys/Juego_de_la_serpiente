@@ -78,29 +78,32 @@ canvas {
 
 .controles {
     display: grid;
-    grid-template-columns: repeat(3, 90px);
-    gap: 10px;
+    grid-template-columns: repeat(3, 120px);
+    gap: 18px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 18px;
+    margin-bottom: 25px;
 }
 
 .controles button,
 .acciones button {
     border: none;
-    border-radius: 12px;
-    padding: 12px 16px;
+    border-radius: 18px;
+    padding: 20px;
+    min-height: 75px;
+    font-size: 28px;
     background: #7d095e;
-    color: #052e16;
+    color: white;
     font-weight: bold;
     cursor: pointer;
     transition: 0.2s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.35);
 }
 
 .controles button:hover,
 .acciones button:hover {
-    transform: scale(1.05);
-    background: #86efac;
+    transform: scale(1.08);
+    background: #22c55e;
 }
 
 .vacio {
